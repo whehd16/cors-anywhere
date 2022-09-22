@@ -31,7 +31,6 @@ cors_proxy.createServer({
     // Strip Heroku-specific headers
     'x-request-start',
     'x-request-id',
-    'host',
     'via',
     'connect-time',
     'total-route-time',
