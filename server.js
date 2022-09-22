@@ -23,7 +23,7 @@ var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
   originWhitelist: originWhitelist,
-  requireHeader: ['x-requested-with'],
+  requireHeader: [],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
@@ -31,6 +31,7 @@ cors_proxy.createServer({
     // Strip Heroku-specific headers
     'x-request-start',
     'x-request-id',
+    'host',
     'via',
     'connect-time',
     'total-route-time',
